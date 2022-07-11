@@ -48,10 +48,10 @@ export default function Home({products}) {
 export async function getStaticProps() {
   // Call an external API endpoint to get posts
   //local
-  const res = await fetch('http://127.0.0.1:8000/api/getProducts')
+  // const res = await fetch('http://127.0.0.1:8000/api/getProducts')
   
   // server
-  // const res = await fetch('http://scooterpanel.ranazain.com/api/getProducts')
+  const res = await fetch('http://scooterpanel.ranazain.com/api/getProducts')
 
   const products   = await res.json();
   // const posts   = res;

@@ -59,11 +59,11 @@ export default function product({post}) {
     //   const one="One";
       // Call an external API endpoint to get posts
       // local
-      const res = await fetch(`http://127.0.0.1:8000/api/getSpecificProductList/${params.categoryName}`)
+    //   const res = await fetch(`http://127.0.0.1:8000/api/getSpecificProductList/${params.categoryName}`)
     //   const res = await fetch(`http://127.0.0.1:8000/api/getSpecificProductList/${one}`)
   
       // server
-      // const res = await fetch(`http://scooterpanel.ranazain.com/api/getSpecificProductList/${params.postId}`)
+      const res = await fetch(`http://scooterpanel.ranazain.com/api/getSpecificProductList/${params.categoryName}`)
   
       const post   = await res.json()
   
