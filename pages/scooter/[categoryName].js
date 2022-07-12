@@ -50,7 +50,7 @@ export default function product({post}) {
          
         // ],
         paths: paths,
-        fallback: ture,
+        fallback: false,
       }
     }
   
