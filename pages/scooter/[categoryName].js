@@ -27,30 +27,30 @@ export default function product({post}) {
     //   const res = await fetch('http://127.0.0.1:8000/api/getProducts')
 
       // server
-      // const res = await fetch('http://scooterpanel.ranazain.com/api/getProducts')
+      const res = await fetch('http://scooterpanel.ranazain.com/api/getProducts')
   
-    //   const data   = await res.json()
+      const data   = await res.json()
       
-    //   const paths= data.data.map(post => {
-    //     return {
-    //       params: {
-    //         postId: `${post.category_name}`
-    //       }
-    //     }
-    //   })
+      const paths= data.data.map(post => {
+        return {
+          params: {
+            categoryName: `${post.category_name}`
+          }
+        }
+      })
     
       return {
-        paths:[
-          {
-            params: {categoryName: 'One'},
-          },
-          {
-            params: {categoryName: 'Two'},
-          },
+        // paths:[
+        //   {
+        //     params: {categoryName: 'One'},
+        //   },
+        //   {
+        //     params: {categoryName: 'Two'},
+        //   },
          
-        ],
-        // paths: paths,
-        fallback: false,
+        // ],
+        paths: paths,
+        fallback: ture,
       }
     }
   
